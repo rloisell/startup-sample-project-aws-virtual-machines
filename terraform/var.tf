@@ -23,7 +23,7 @@ variable "lc_name" {
 }
 variable "iamge_id" {
   description = "id of the ami used"
-  default     = "ami-0cd8217d39da92e6d"
+  default     = "ami-06e39367bd3bb55a7"
   type        = string
 }
 
