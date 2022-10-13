@@ -8,7 +8,7 @@ variable "target_aws_account_id" {
 
 variable "git_url" {
   description = "url of the git repo to clone"
-  default     = "github.com/bcgov/startup-sample-project-aws-virtual-machines.git"
+  default     = "github.com/rloisell/startup-sample-project-aws-virtual-machines.git"
   type        = string
 }
 
@@ -18,7 +18,7 @@ variable "sha" {
 }
 variable "lc_name" {
   description = "Name of the launch configuration"
-  default     = "sssp-vm-lc"
+  default     = "zpa-appconnector-vm-lc"
   type        = string
 }
 variable "iamge_id" {
@@ -29,18 +29,12 @@ variable "iamge_id" {
 
 variable "asg_name" {
   description = "name of the autoscaling group created"
-  default     = "ssp-vm-asg"
+  default     = "zpa-appconnector-vm-asg"
   type        = string
 }
 variable "branch" {
   description = "name of the autoscaling group created"
   default     = "main"
-  type        = string
-}
-
-variable "table_name" {
-  description = "name of the dynamodb table created"
-  default     = "ssp-greetings-vm"
   type        = string
 }
 variable "instances_name" {
@@ -51,30 +45,30 @@ variable "instances_name" {
 
 variable "policy_name" {
   description = "name of the policy created"
-  default     = "ssp_db"
+  default     = "zpa-appconnector_db"
   type        = string
 }
 variable "role_name" {
   description = "name of the role created"
-  default     = "ssp-db"
+  default     = "zpa-appconnector-db"
   type        = string
 }
 variable "iam_profile" {
   description = "name of the IAM profile created"
-  default     = "ssp_profile"
+  default     = "zpa-appconnector_profile"
   type        = string
 }
 
 variable "app_port" {
   description = "Port exposed by the docker image to redirect traffic to"
-  default     = 8080
+  default     = 443
 }
 variable "health_check_path" {
   default = "/"
 }
 variable "service_names" {
   description = "List of service names to use as subdomains"
-  default     = ["vm-app", "vm-startup-sample-app"]
+  default     = ["vm-app", "vm-zpa-appconnector"]
   type        = list(string)
 }
 
