@@ -8,7 +8,7 @@ variable "target_aws_account_id" {
 
 variable "git_url" {
   description = "url of the git repo to clone"
-  default     = "github.com/bcgov/startup-sample-project-aws-virtual-machines.git"
+  default     = "github.com/rloisell/startup-sample-project-aws-virtual-machines.git"
   type        = string
 }
 
@@ -23,7 +23,7 @@ variable "lc_name" {
 }
 variable "iamge_id" {
   description = "id of the ami used"
-  default     = "ami-07b9af865d56e30ac"
+  default     = "ami-06e39367bd3bb55a7"
   type        = string
 }
 
